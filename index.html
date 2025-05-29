@@ -23,21 +23,46 @@
       color: white;
       text-align: center;
     }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: white;
+      position: absolute;
+      top: 1.2rem;
+      right: 2rem;
+      z-index: 999;
+    }
     nav {
       background: #004d40;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       padding: 0.5rem;
     }
     nav a {
       color: white;
-      margin: 0 1rem;
+      margin: 0.5rem 1rem;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
     }
     nav a:hover {
       color: #ffcc80;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+      }
+      nav.active {
+        display: flex;
+      }
     }
     .hero {
       position: relative;
@@ -126,11 +151,20 @@
       padding: 1rem;
     }
   </style>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
 </head>
 <body>
   <header>
     <h1>Academia Águas Vivas</h1>
     <p>A sua escola de natação com excelência</p>
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
   </header>
 
   <nav>
@@ -199,7 +233,19 @@
 
   <footer id="contato">
     <p>Entre em contato: (11) 99999-9999 | contato@aguasvivas.com.br</p>
+    <div style="margin: 1rem 0;">
+      <a href="https://twitter.com" target="_blank" style="color: white; margin: 0 0.5rem; text-decoration: none;">
+        <i class="fab fa-twitter fa-lg"></i>
+      </a>
+      <a href="https://facebook.com" target="_blank" style="color: white; margin: 0 0.5rem;text-decoration: none;">
+        <i class="fab fa-facebook-f fa-lg"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" style="color: white; margin: 0 0.5rem;text-decoration: none;">
+        <i class="fab fa-instagram fa-lg"></i>
+      </a>
+    </div>
     <p>© 2025 Academia Águas Vivas. Todos os direitos reservados.</p>
   </footer>
+  
 </body>
 </html>
