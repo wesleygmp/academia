@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia Águas Vivas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: #e0f7fa;
+      color: #003b5c;
+    }
+    header {
+      background-color: #00796b;
+      padding: 1rem 2rem;
+      color: white;
+      text-align: center;
+    }
+    nav {
+      background: #004d40;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc80;
+    }
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
+    }
+    .carousel {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      animation: slide 12s infinite;
+    }
+    .carousel img {
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0%); }
+    }
+    section {
+      padding: 2rem;
+    }
+    section.info, section.promocoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 300px;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .promocoes h2, .agendamento h2 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .form-agendamento {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .form-agendamento input, .form-agendamento select, .form-agendamento button {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    .form-agendamento button {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .form-agendamento button:hover {
+      background-color: #004d40;
+    }
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Academia Águas Vivas</h1>
+    <p>A sua escola de natação com excelência</p>
+  </header>
+
+  <nav>
+    <a href="#">Início</a>
+    <a href="#info">Informações</a>
+    <a href="#promocoes">Promoções</a>
+    <a href="#agendamento">Agendamento</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section class="hero">
+    <div class="carousel">
+      <img src="https://images.unsplash.com/photo-1583454110551-21f3b6f5e648?auto=format&fit=crop&w=1500&q=80" alt="Piscina 1">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1500&q=80" alt="Piscina 2">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1500&q=80" alt="Aula de Natação">
+    </div>
+  </section>
+
+  <section id="info" class="info">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1590080876836-4eaf09e3f98a?auto=format&fit=crop&w=800&q=80" alt="Aulas para todos">
+      <h2>Aulas para todas as idades</h2>
+      <p>Turmas para bebês, crianças, adolescentes, adultos e terceira idade com professores especializados.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Infraestrutura">
+      <h2>Infraestrutura moderna</h2>
+      <p>Piscinas cobertas e climatizadas, vestiários equipados e área de espera confortável.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1583369860645-c87c33c3a683?auto=format&fit=crop&w=800&q=80" alt="Horários flexíveis">
+      <h2>Horários flexíveis</h2>
+      <p>Escolha aulas pela manhã, tarde ou noite, adaptando à sua rotina com liberdade.</p>
+    </div>
+  </section>
+
+  <section id="promocoes" class="promocoes">
+    <h2>Promoções Especiais</h2>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1590080876836-4eaf09e3f98a?auto=format&fit=crop&w=800&q=80" alt="Matrícula grátis">
+      <h3>Matrícula Grátis</h3>
+      <p>Somente este mês! Faça sua matrícula sem pagar nada e ganhe uma touca personalizada.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=800&q=80" alt="Desconto família">
+      <h3>Desconto Família</h3>
+      <p>Traga mais um membro da família e todos ganham 15% de desconto na mensalidade.</p>
+    </div>
+  </section>
+
+  <section id="agendamento" class="agendamento">
+    <h2>Agende uma Aula Experimental</h2>
+    <form class="form-agendamento">
+      <input type="text" placeholder="Nome completo" required>
+      <input type="email" placeholder="E-mail" required>
+      <input type="tel" placeholder="Telefone" required>
+      <select required>
+        <option value="">Escolha o horário</option>
+        <option>Manhã</option>
+        <option>Tarde</option>
+        <option>Noite</option>
+      </select>
+      <button type="submit">Agendar</button>
+    </form>
+  </section>
+
+  <footer id="contato">
+    <p>Entre em contato: (11) 99999-9999 | contato@aguasvivas.com.br</p>
+    <p>© 2025 Academia Águas Vivas. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
